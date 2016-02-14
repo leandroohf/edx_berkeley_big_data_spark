@@ -1,0 +1,15 @@
+
+* EDX: Big Data Analysis with Spark (Berkeley)
+  
+  https://www.edx.org/course/big-data-analysis-spark-uc-berkeleyx-cs110x
+
+  This project is course that I did in the EDX platform (The course
+  was archived)
+
+  * Learn objectives
+    * How to use Apache Spark to perform data analysis
+    * How to use parallel programming to explore data sets
+    * Apply log mining, textual entity recognition and collaborative
+      filtering techniques to real-world data questions
+      
+  See [[file:mooc-setup-master/README.md]] 
