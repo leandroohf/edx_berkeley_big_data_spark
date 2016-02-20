@@ -14,5 +14,24 @@
       filtering techniques to real-world data questions
     * Start learn about recomendation system (movie recomendation)
     * Use emacs, tramp and sunrise to mage and edit remote file
+    * Get more familiar with vagrant (Manager virtual development
+      enviroments)
       
   See [[file:mooc-setup-master/README.md]] 
+
+* Manager Virtual Development Enviroment with Vagrant and emacs
+
+  [[https://www.vagrantup.com/][Vagrant]] is software to help you to manage vritual enviroments. It
+  becomes easy to configure, reproducible and portable work
+  enviroments.
+
+  [[https://www.gnu.org/software/emacs/][Emacs]] is powerful editor that provides modes to manager vagrants
+  virtua machines, access files and folder remotely transparently. So
+  a piece of cake to develop and work with vagrant. For this project
+  we worked with 2 mode: [[https://github.com/dougm/vagrant-tramp][vagrant-tramp]]and and [[https://www.emacswiki.org/emacs/Sunrise_Commander][sunrise]] (see also:
+  [[http://pragmaticemacs.com/emacs/double-dired-with-sunrise-commander/][pragmatic_emacs]])
+
+  The snapshot bellow shows a printscreen of the sunrise fle manager
+  in emacs: 
+
+  [[file:figures/Screenshot%20from%202016-02-19%2022:43:44.png]]
