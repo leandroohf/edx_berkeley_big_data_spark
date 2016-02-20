@@ -8,8 +8,11 @@
 
   * Learn objectives
     * How to use Apache Spark to perform data analysis
+    * First step with machine learn library MLlib
     * How to use parallel programming to explore data sets
     * Apply log mining, textual entity recognition and collaborative
       filtering techniques to real-world data questions
+    * Start learn about recomendation system (movie recomendation)
+    * Use emacs, tramp and sunrise to mage and edit remote file
       
   See [[file:mooc-setup-master/README.md]] 
