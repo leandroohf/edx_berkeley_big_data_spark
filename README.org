@@ -3,12 +3,12 @@
   
   https://www.edx.org/course/big-data-analysis-spark-uc-berkeleyx-cs110x
 
-  This project is course that I did in the EDX platform (The course
+  This project is course that I took in the EDX platform (The course
   was archived)
 
   * Learn objectives
-    * How to use Apache Spark to perform data analysis
-    * First step with machine learn library MLlib
+    * How to use [[http://spark.apache.org/][Apache Spark]] to perform data analysis
+    * First step with machine learn library [[http://spark.apache.org/docs/latest/mllib-guide.html][MLlib]]
     * How to use parallel programming to explore data sets
     * Apply log mining, textual entity recognition and collaborative
       filtering techniques to real-world data questions
@@ -19,6 +19,38 @@
       
   See [[file:mooc-setup-master/README.md]] 
 
+* Spark notes
+  
+  Spark is a general purpose cluster computing framework that provides
+  efficient in-memory computations for large data sets by distributing
+  computation across multiple computers.
+
+  * Workflow
+    * Create or load a RDD (Resilient Distributed Data)
+    * Invoke operation on RDD by passing fucntion closures to each
+      element
+      * When Spark runs a closure on a worker, any variables used in
+        the closure are copied to that node, but are maintained within
+        the local scope of that closure.
+      * Shared variables: /Broadcast variables/ (read only) is
+        distrubited to all cluster
+    * Use the result RDD with actions: count, collect ( the result is
+      not big) and save
+  * Tips
+    * Try to think as much as possible in term of Key value pairs
+    * Do not copy all elements of large RDD to the driver (Avoid
+      collect() in big data) because of the memory limit
+      * Use take oy takeSample
+      * Or Use filter
+    * avoid GroupByKey() when is possible (shuffle data, so there is a
+      lot of data traffic and that have cost)
+      
+  To see the labs exercise, see [[file:mooc-setup-master/][Iptyhon Notebooks labs]]
+  * text analytics exercise: [[file:mooc-setup-master/lab3_text_analysis_and_entity_resolution_student.ipynb]]
+  * log analysis: [[file:mooc-setup-master/lab2_apache_log_student.ipynb]]
+  * MLlib and movie recomendadtions:
+    [[file:mooc-setup-master/lab4_machine_learning_student.ipynb]]
+
 * Manager Virtual Development Enviroment with Vagrant and emacs
 
   [[https://www.vagrantup.com/][Vagrant]] is software to help you to manage vritual enviroments. It
@@ -26,12 +58,12 @@
   enviroments.
 
   [[https://www.gnu.org/software/emacs/][Emacs]] is powerful editor that provides modes to manager vagrants
-  virtua machines, access files and folder remotely transparently. So
+  virtual machines, access files and folder remotely transparently. So
   a piece of cake to develop and work with vagrant. For this project
   we worked with 2 mode: [[https://github.com/dougm/vagrant-tramp][vagrant-tramp]]and and [[https://www.emacswiki.org/emacs/Sunrise_Commander][sunrise]] (see also:
   [[http://pragmaticemacs.com/emacs/double-dired-with-sunrise-commander/][pragmatic_emacs]])
 
-  The snapshot bellow shows a printscreen of the sunrise fle manager
-  in emacs: 
+  The snapshot bellow shows a printscreen of the sunrise file manager
+  in emacs:
 
   [[file:figures/Screenshot%20from%202016-02-19%2022:43:44.png]]
